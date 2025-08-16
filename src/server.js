@@ -20,6 +20,10 @@ app.use(morgan('dev'));
 const authRoutes = require('./routes/auth');
 const conversationRoutes = require('./routes/conversations');
 const messageRoutes = require('./routes/messages');
+const userRoutes = require('./routes/users');
+
+
+app.use('/api/users', userRoutes);
 
 app.use('/api/auth', authRoutes);
 app.use('/api/conversations', conversationRoutes);
